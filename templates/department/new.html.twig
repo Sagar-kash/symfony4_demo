@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Department{% endblock %}
+
+{% block body %}
+        <style>
+        #department{
+            padding-bottom: 20px;
+        }
+    </style>
+    <h1>Create new Department</h1>
+
+    {{ include('department/_form.html.twig') }}
+
+{% endblock %}

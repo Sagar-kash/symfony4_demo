@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Employee{% endblock %}
+
+{% block body %}
+    <style>
+    #employee{ padding-bottom: 20px;}
+</style>
+    <h1>Create new Employee</h1>
+
+    {{ include('employee/_form.html.twig') }}
+
+{% endblock %}

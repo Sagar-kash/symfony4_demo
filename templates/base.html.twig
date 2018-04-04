@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}<link rel="stylesheet" href="{{ asset('build/app.css') }}">{% endblock %}
+    </head>
+    <body>
+            <div class="container">
+                <div style="float:right; margin-top:  20px;">
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                        <p>name: {{ app.user.username }}&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{{ path('logout') }}">Logout</a></p>
+{% endif %}
+                </div>
+        {% block body %}{% endblock %}
+    </div>
+        <script src="{{ asset('build/app.js') }}"></script>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

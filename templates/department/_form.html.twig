@@ -1,0 +1,6 @@
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn">{{ button_label|default('Save') }}</button>
+    <a href="{{ path('employee_index') }}" class="btn btn-info">Employee list</a>
+    <a href="{{ path('department_index') }}" class="btn btn-info">Back to list</a>
+{{ form_end(form) }}

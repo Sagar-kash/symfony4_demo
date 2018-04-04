@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Department{% endblock %}
+
+{% block body %}
+    <style>
+        #department{
+            padding-bottom: 20px;
+        }
+    </style>
+    <h1>Edit Department</h1>
+
+    {{ include('department/_form.html.twig', {'button_label': 'Update'}) }}
+
+
+{#    {{ include('department/_delete_form.html.twig') }}#}
+{% endblock %}
